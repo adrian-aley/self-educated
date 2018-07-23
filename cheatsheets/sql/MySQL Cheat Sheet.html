@@ -1,0 +1,537 @@
+<html>
+<title>MySQL Cheat Sheet</title>
+<body>
+<CENTER><H1>(My)SQL Cheat Sheet</H1></CENTER>
+
+<LINK REL="stylesheet" HREF="style.css" TYPE="text/css">
+Here are the most commonly used SQL commands and the most
+commonly used options for each.
+There are many more commands and options than listed here.
+In other words, the syntaxes as I have listed them are far
+from complete.
+See the links at the bottom for more complete syntaxes and more
+commands.
+
+<p>
+
+<CENTER>
+
+<table border><tr><td>
+<table bgcolor="#557755" cellspacing=5 class="smaller" class="smaller">
+<tr valign=top><td colspan=3 align=center><b>MySQL Command-Line</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+	<td><b>Example(s)</b></td></tr>
+<tr valgin=top><td>Running MySQL</td>
+	<td>mysql -u<i>username</i> -p<i>password</i></td>
+	<td>mysql -ucusack2RO -pegbdf5s</td></tr>
+<tr valign=top><td>Importing</td>
+	<td>mysql -u<i>username</i> -p<i>password</i> &lt; <i>filename</i></td>
+	<td>mysql -usomeDB -pblah &lt; myNewDB.sql</td></tr>
+<tr valign=top><td>Dumping<br> (Saving) </td>
+	<td>mysqldump -u<i>username</i> -p<i>password</i> 
+		<i>database</i> [<i>tables</i>] &gt; <i>filename</i></td>
+	<td>mysqldump -ume -pblah myDB &gt; My.sql<br>
+	mysqldump -ume -pblah myDB table1 <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	table2 &gt; my.sql<br>
+		</td></tr>
+</table>
+</td></tr></table>
+
+<p>
+<table border><tr><td>
+<table bgcolor="#55777" cellspacing=5 class="smaller">
+<tr valign=top><td colspan=3 align=center><b>Common MySQL Column Types
+</b></td></tr>
+<tr valign=top>
+	<td><b>Purpose</b></td>
+	<td><b>Data Type</b></td>
+	<td><b>Example</b></td></tr>
+<tr valign=top>
+	<td>Integers</td>
+	<td>int(<i>M</i>)</td>
+	<td>int(5)</td></tr>
+<tr valign=top>
+	<td>Floating-point (real) numbers </td>
+	<td>float(<i>M</i>,<i>D</i>)</td>
+	<td>float(12,3)</td></tr>
+<tr valign=top>
+	<td>Double-precision floating-point</td>
+	<td>double(<i>M</i>,<i>D</i>)</td>
+	<td>double(20,3)</td></tr>
+<tr valign=top>
+	<td>Dates and times</td>
+	<td>timestamp(<i>M</i>)</td>
+	<td>timestamp(8) (for YYYYMMDD)<br>
+	timestamp(12) (for YYYYMMDDHHMMSS)</td></tr>
+<tr valign=top><td>Fixed-length strings</td>
+	<td>char(<I>M</i>)</td>
+	<td>char(10)</td></tr>
+<tr valign=top><td>Variable-length strings</td>
+	<td>varchar(<i>M</i>)</td>
+	<td>varchar(20)</td></tr>
+<tr valign=top><td>A large amount of text</td>
+	<td>blob</td>
+	<td>blob</td></tr>
+<tr valign=top><td>Values chosen from a list</td>
+	<td>enum('value1',value2',...)</td>
+	<td>enum('apples','oranges','bananas')</blobtd></tr>
+<tr valign=top><td colspan=3><hr></td></tr>
+<tr valign=top><td colspan=3>
+	<i>M</i> is maximum to display, and <i>D</i> is
+	precision to the right of the decimal.
+</td></tr>
+</table>
+</td></tr></table>
+
+<p>
+
+<table border><tr><td>
+<table bgcolor="#557799" cellspacing=5 class="smaller">
+<tr valign=top><td colspan=3 align=center>
+<b>MySQL Mathematical Functions</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+<tr valign=top><td>Count rows per group</td>
+	<td>COUNT(<i>column</i> | *)</td></tr>
+<tr valign=top><td>Average value of group</td>
+	<td>AVG(<i>column</i>)</td></tr>
+<tr valign=top><td>Minumum value of group</td>
+	<td>MIN(<i>column</i>)</td></tr>
+<tr valign=top><td>Maximum value of group</td>
+	<td>MAX(<i>column</i>)</td></tr>
+<tr valign=top><td>Sum values in a group</td>
+	<td>SUM(<i>column</i>)</td></tr>
+<tr valign=top><td>Absolute value</td>
+	<td>abs(<i>number</i>)</td></tr>
+<tr valign=top><td>Rounding numbers</td>
+	<td>round(<i>number</i>)</td></tr>
+<tr valign=top><td>Largest integer not greater</td>
+	<td>floor(<i>number</i>)</td></tr>
+<tr valign=top><td>Smallest integer not smaller</td>
+	<td>ceiling(<i>number</i>)</td></tr>
+<tr valign=top><td>Square root</td>
+	<td>sqrt(<i>number</i>)</td></tr>
+<tr valign=top><td><i>n</i>th power</td>
+	<td>pow(<i>base</i>,<i>exponent</i>)</td></tr>
+<tr valign=top><td>random number <i>n</i>, 0&lt;<i>n</i> &lt; 1</td>
+	<td>rand()</td></tr>
+<tr valign=top><td>sin (similar cos, etc.)</td>
+	<td>sin(<i>number</i>)</td></tr>
+</table>
+</td><td>
+<table bgcolor="#557799" cellspacing=5 class="smaller">
+<tr valign=top><td colspan=3 align=center>
+<b>MySQL String Functions</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+<tr valign=top><td>Compare strings</td>
+	<td>strcmp(<i>string1</i>,<i>string2</i>)</td></tr>
+<tr valign=top><td>Convert to lower case</td>
+	<td>lower(<i>string</i>)</td></tr>
+<tr valign=top><td>Convert to upper case</td>
+	<td>upper(<i>string</i>)</td></tr>
+<tr valign=top><td>Left-trim whitespace (similar right)</td>
+	<td>ltrim(<i>string</i>)</td></tr>
+<tr valign=top><td>Substring of string</td>
+	<td>substring(<i>string</i>,<i>index1</i>,<i>index2</i>)
+	</td></tr>
+<tr valign=top><td>Encrypt password</td>
+	<td>password(<i>string</i>)</td></tr>
+<tr valign=top><td>Encode string</td>
+	<td>encode(<i>string</i>,<i>key</i>)</td></tr>
+<tr valign=top><td>Decode string</td>
+	<td>decode(<i>string</i>,<i>key</i>)</td></tr>
+<tr valign=top><td>Get date</td>
+	<td>curdate()</td></tr>
+<tr valign=top><td>Get time</td>
+	<td>curtime()</td></tr>
+<tr valign=top><td>Extract day name from date string</td>
+	<td>dayname(<i>string</i>)</td></tr>
+<tr valign=top><td>Extract day number from date string</td>
+	<td>dayofweek(<i>string</i>)</td></tr>
+<tr valign=top><td>Extract month from date string</td>
+	<td>monthname(<i>string</i>)</td></tr>
+</table>
+</td></tr></table>
+<p>
+
+<table border><tr><td>
+<table bgcolor="#5577aa" cellspacing=5 class="smaller">
+<tr valign=top><td colspan=3 align=center><b>Basic MySQL Commands</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+	<td><b>Example(s)</b></td></tr>
+<tr valign=top><td>List all databases</td>
+	<td>SHOW DATABASES;</td>
+	<td>SHOW DATABASES;</td></tr>
+<tr valign=top><td>Create database</td>
+	<td>CREATE DATABASE <i>database</i>;</td>
+	<td>CREATE DATABASE PhoneDB;</td></tr>
+<tr valign=top><td>Use a database</td>
+	<td>USE <i>database</i>;</td>
+	<td>USE PhonDB;</td></tr>
+<tr valign=top><td>List tables in the database</td>
+	<td>SHOW TABLES;</td>
+	<td>SHOW TABLES;</td></tr>
+<tr valign=top><td>Show the structure of a table</td>
+	<td>DESCRIBE <i>table</I>;<br>
+	SHOW COLUMNS FROM <i>table</i>;</td>
+	<td>DESCRIBE Animals;<br>
+	SHOW COLUMNS FROM Animals;</td>
+	</td></tr>
+<tr valign=top><td>Delete a database (<i>Careful!</i>)</td>
+	<td>DROP DATABASE <i>database</i>;</td>
+	<td>DROP DATABASE PhoneDB;</td></tr>
+</table>
+</td></tr></table>
+
+<p>
+
+<table border><tr><td>
+<table bgcolor="#5577dd" cellspacing=5 class="smaller">
+<tr valign=top>
+<td colspan=3 align=center><b>SQL Commands: Modifying</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+	<td><b>Example(s)</b></td></tr>
+<tr valign=top><td>Create table</td>
+	<td>CREATE TABLE <i>table</i> ( <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column1</i> <i>type</i> [[NOT] NULL] <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	[AUTO_INCREMENT],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column2</i> <i>type</i> [[NOT] NULL] <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	[AUTO_INCREMENT],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        ...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        <i>other options</i>,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	PRIMARY KEY (<i>column(s)</i>)&nbsp; &nbsp; ); </td>
+	<td>CREATE TABLE Students (<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	LastName varchar(30) NOT NULL,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	FirstName varchar(30) NOT NULL,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	StudentID int  NOT NULL,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	Major varchar(20),<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	Dorm varchar(20),<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+  	PRIMARY KEY (StudentID) &nbsp; &nbsp );</td></tr>
+<tr valign=top><td>Insert data </td>
+	<td>INSERT INTO <i>table</i> VALUES <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	(<i>list of values</i>);<br>
+	INSERT INTO <i>table</i> SET<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column1</i>=<i>value1</i>,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column2</i>=<i>value2</i>,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        ...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>columnk</i>=<i>valuek</i>;<br>
+	INSERT INTO <i>table</i> (<i>column1</i>,<i>column2</i>,...)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	VALUES (<i>value1</i>,<i>value2</i>...);
+	</td>
+	<td>INSERT INTO Students VALUES<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; 
+	('Smith','John',123456789,'Math','Selleck');<br>
+	INSERT INTO Students SET<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FirstName='John',<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	LastName='Smith',<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	StudentID=123456789,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	Major='Math';<br>
+	INSERT INTO Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	(StudentID,FirstName,LastName)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	VALUES (123456789,'John','Smith');
+	</td></tr>
+<tr valign=top><td>Insert/Select </td>
+	<td>
+	INSERT INTO <i>table</i> (<i>column1</i>,<i>column2</i>,...)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>SELECT statement</i>;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	(See below)
+	</td>
+	<td>
+	INSERT INTO Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	(StudentID,FirstName,LastName)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	SELECT StudentID,FirstName,LastName <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM OtherStudentTable;<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE LastName like '%son';
+	</td></tr>
+<tr valign=top><td>Delete data</td>
+	<td>DELETE FROM <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	 [WHERE <i>condition(s)</i>];<br><br><br><br>
+        (Omit <B>WHERE</B> to delete all data)
+	</td>
+	<td>
+        DELETE FROM Students <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE LastName='Smith';<br>
+        DELETE FROM Students <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE LastName like '%Smith%';<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	AND FirstName='John';<br>
+	DELETE FROM Students;
+        </td></tr>
+<tr valign=top><td>Updating Data</td>
+	<td>UPDATE <i>table</i> SET<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column1</i>=<i>value1</i>,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column2</i>=<i>value2</i>,<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        ...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>columnk</i>=<i>valuek</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        [WHERE <i>condition(s)</i>];
+        </td>
+	<td>UPDATE Students SET <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	LastName='Jones' WHERE<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	StudentID=987654321;<br>
+	UPDATE Students SET <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	LastName='Jones', Major='Theatre' <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE StudentID=987654321 OR<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        (MAJOR='Art' AND FirstName='Pete');
+	</td></tr>
+<tr valign=top><td>Insert column</td>
+	<td>ALTER TABLE <i>table</i> ADD COLUMN <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column</i> <i>type</i> <i>options</i>;</td>
+	<td>ALTER TABLE Students ADD COLUMN <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	Hometown varchar(20);
+	</td></tr>
+<tr valign=top><td>Delete column</td>
+	<td>ALTER TABLE <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	DROP COLUMN <i>column</i>;</td>
+	<td>ALTER TABLE Students <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	DROP COLUMN Dorm;
+	</td></tr>
+<tr valign=top><td>Delete table (<i>Careful!</i>)</td>
+	<td>DROP TABLE [IF EXISTS] <i>table</i>;</td>
+	<td>DROP TABLE Animals;</td></tr>
+</table>
+</td></tr></table>
+<p>
+
+<table border><tr><td>
+<table bgcolor="#5577ff" cellspacing=5 class="smaller">
+<tr valign=top>
+<td colspan=3 align=center><b>SQL Commands: Querying</b></td></tr>
+<tr valign=top><td><b>What</b></td>
+	<td><b>How</b></td>
+	<td><b>Example(s)</b></td></tr>
+<tr valign=top><td>All columns</td>
+	<td>SELECT * FROM <i>table</i>;</td>
+	<td>SELECT * FROM Students;</td></tr>
+<tr valign=top><td>Some columns</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...
+	FROM <i>table</i>;</td>
+	<td>
+        SELECT LastName, FirstName FROM Students;
+	</td></tr>
+<tr valign=top><td>Some rows/<br>columns</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[WHERE <i>condition(s)</i>];</td>
+	<td>SELECT LastName,FirstName<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE StudentID LIKE '%123%';</td>
+	</tr>
+<tr valign=top><td>No Repeats</td>
+	<td>SELECT [DISTINCT] <i>column(s)</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table</i>;<br></td>
+	<td>SELECT DISTINCT LastName<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students;
+	</td>
+	</tr>
+<tr valign=top><td>Ordering </td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[ORDER BY <i>column(s)</i> [DESC]];
+	</td>
+	<td>SELECT LastName,FirstName<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        ORDER BY LastName, FirstName DESC;
+	</td></tr>
+<tr valign=top><td>Column<br>Aliases</td>
+	<td>SELECT <i>column1</i> [AS <i>alias1</i>],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column2</i> [AS <i>alias2</i>], ...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table1</i>;
+	<td>
+	SELECT LastName,FirstName AS First<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students;
+	</td>
+	</tr>
+<tr valign=top><td>Grouping</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[GROUP BY <i>column(s)</i>];
+	</td>
+	<td>SELECT LastName,COUNT(*)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        GROUP BY LastName;
+	</td>
+	</tr>
+<tr valign=top><td>Group Filtering</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table</i><br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[GROUP BY <i>column(s)</i>]<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[HAVING <i>condition(s)</i>];
+	</td>
+	<td>SELECT LastName,COUNT(*)<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        GROUP BY LastName<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        HAVING LastName like '%son';
+	</td>
+	</tr>
+<tr valign=top><td>Joins</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table1</i>,<i>table2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[WHERE <i>condition(s)</i>];</td>
+	<td>
+	SELECT LastName,Points<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students,Assignments <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE AssignmentID=12 AND<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	Students.StudentID=Assignments.StudentID;
+        </td>
+	</tr>
+<tr valign=top><td>Table <br>Aliases</td>
+	<td>SELECT <i>column1</i>,<i>column2</i>,...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table1</i> [<i>alias1</i>],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>table2</i> [<i>alias2</i>],...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[WHERE <i>condition(s)</i>];</td>
+	<td>
+	SELECT LastName,Points<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students S,Assignments A <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE S.StudentID=A.StudentID AND <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	A.AssignmentID=12;</td>
+	</tr>
+<tr valign=top><td>Everything</td>
+	<td>SELECT [DISTINCT] <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column1</i> [AS <i>alias1</i>],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>column2</i> [AS <i>alias2</i>], ...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM <i>table1</i> [<i>alias1</i>],<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<i>table2</i> [<i>alias2</i>],...<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[WHERE <i>condition(s)</i>]<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[GROUP BY <i>column(s)</i>]<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[HAVING <i>condition(s)</i>]<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	[ORDER BY <i>column(s)</i> [DESC]];
+	</td>
+	<td>
+	SELECT Points, COUNT(*) AS Cnt<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	FROM Students S,Assignments A <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	WHERE S.StudentID=A.StudentID AND <br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	A.AssignmentID=12<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        GROUP BY Points<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	HAVING Points > 10<br>
+	&nbsp; &nbsp; &nbsp; &nbsp;
+        ORDER BY Cnt, Points DESC;
+	</td>
+	</tr>
+</table>
+</td></tr></table>
+
+</center>
+
+<p>
+
+For more details, see the following pages from 
+<A href="http://www.mysql.com/">MySQL.com</a>.
+<li><A href="http://www.mysql.com/doc/en/index.html">
+	MySQL Reference Manual</a> 
+<li><a href="http://www.mysql.com/doc/en/Column_types.html">
+	MySQL Column Types</a>
+<li><a href="http://www.mysql.com/doc/en/SHOW.html">SHOW syntax</a>
+<li><a href="http://www.mysql.com/doc/en/CREATE_TABLE.html">
+	CREATE TABLE syntax</a>
+<li><a href="http://www.mysql.com/doc/en/ALTER_TABLE.html">
+	ALTER TABLE syntax</a>
+<li><a href="http://www.mysql.com/doc/en/INSERT.html">INSERT syntax</a>
+<li><a href="http://www.mysql.com/doc/en/DELETE.html">DELETE syntax</a>
+<li><a href="http://www.mysql.com/doc/en/UPDATE.html">UPDATE syntax</a>
+<li><a href="http://www.mysql.com/doc/en/SELECT.html">SELECT syntax</a>
+<li><a href="http://www.mysql.com/doc/en/INSERT_SELECT.html">
+	INSERT ... SELECT syntax</a>
+<li><a href="http://www.mysql.com/doc/en/Functions.html">
+	MySQL Functions</a>
+</body>
+</html>
