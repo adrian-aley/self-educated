@@ -1,0 +1,1100 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class=" scrolling-body ">
+
+<head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/7714B75E-DAC4-034D-BF41-6D6CBC9FA687/main.js" charset="UTF-8"></script><script type="text/javascript">
+        
+        window.IC = window.IC || {};
+        window.IC.currentUser = JSON.parse('{\u0022id\u0022:9148762,\u0022username\u0022:\u00222018\u002D07\u002D28_07:19:50_m+$_#4\u0022,\u0022email\u0022:null,\u0022date_joined\u0022:\u00222018\u002D07\u002D28T07:19:50.902832+00:00\u0022,\u0022first_name\u0022:\u0022\u0022,\u0022last_name\u0022:\u0022\u0022,\u0022full_name\u0022:\u0022\u0022,\u0022short_name\u0022:\u0022friend\u0022,\u0022is_anonymous\u0022:true,\u0022is_on_last_question\u0022:false,\u0022percent_done\u0022:0,\u0022num_questions_done\u0022:0,\u0022num_questions_remaining\u0022:46,\u0022recruiting_is_interested_in_intros\u0022:null,\u0022is_full_access\u0022:false,\u0022first_payment_date\u0022:null,\u0022last_payment_date\u0022:null,\u0022num_free_questions_left\u0022:3,\u0022terms_has_agreed_to_latest\u0022:false,\u0022preferred_content_language\u0022:\u0022\u0022,\u0022preferred_editor_language\u0022:\u0022\u0022,\u0022is_staff\u0022:false,\u0022auth_providers_human_readable_list\u0022:\u0022\u0022,\u0022num_auth_providers\u0022:0,\u0022auth_email\u0022:\u0022\u0022,\u0022profile_public_id\u0022:null}');
+        
+    </script>
+
+    
+        <script src="//cdn.optimizely.com/js/1358232165.js"></script>
+    
+
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"7328113","licenseKey":"9e57878e2e","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","transactionName":"ZVwAbEQCDUQCAUwKDFwWJE1YABdeDAwXDhpBUBZdGA4CXg0DSBNNRFAHT0VZB0QC","agent":"","applicationTime":93,"queueTime":2}</script>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?bust=186" />
+        <link rel="canonical" href="https://www.interviewcake.com/data-structures-and-algorithms-guide" />
+        <meta name="description" content="
+No confusing academic jargon or proofs. That stuff doesn't help you really get it. Instead, we'll give you a visual, intuitive sense for how data structures and algorithms actually work.
+"/>
+
+        <meta property="og:title" content="Data Structures and Algorithms (DSA): The Intuitive Guide | Interview Cake" />
+        <meta property="og:description" content="
+No confusing academic jargon or proofs. That stuff doesn't help you really get it. Instead, we'll give you a visual, intuitive sense for how data structures and algorithms actually work.
+" />
+        <meta property="og:image" content="https://www.interviewcake.com/static/images/cards/dsa_guide.png?bust=186?bust=186" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Interview Cake: Programming Interview Questions and Tips" />
+        <meta property="fb:app_id" content="149278655279066"/>
+        <meta property="fb:admins" content="514407734"/>
+        <meta property="og:url" content="https://www.interviewcake.com/data-structures-and-algorithms-guide"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@interviewcake" />
+        <meta name="twitter:title" content="Data Structures and Algorithms (DSA): The Intuitive Guide | Interview Cake" />
+        <meta name="twitter:description" content="
+No confusing academic jargon or proofs. That stuff doesn't help you really get it. Instead, we'll give you a visual, intuitive sense for how data structures and algorithms actually work.
+" />
+        <meta name="twitter:creator" content="@interviewcake" />
+        <meta name="twitter:image:src" content="https://www.interviewcake.com/static/images/cards/dsa_guide.png?bust=186?bust=186" />
+        <meta name="twitter:domain" content="interviewcake.com" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="google-site-verification" content="r7D0sJ5yY_0tZHJ3uXk2pPriygDLCPtz7Ihqq5NTpf8" />
+
+        <title>Data Structures and Algorithms (DSA): The Intuitive Guide | Interview Cake</title>
+    
+
+    
+
+    
+        <script type="text/javascript">
+            window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(a){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(a),window.analytics.push(t),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+a+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},window.analytics.SNIPPET_VERSION="2.0.6",
+            window.analytics.load("rowk0wc1g6"),
+            window.analytics.page();
+        </script>
+    
+
+    
+
+    
+
+    
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css" rel="stylesheet" />
+    
+
+    
+
+    
+        <link rel="stylesheet" href="/static/CACHE/css/6936bf7e1f6d.css" type="text/css" media="all" />
+        
+    
+
+    
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Inconsolata:400,700|Lora:400,400italic' rel='stylesheet' type='text/css'>
+
+    
+
+    <link rel="apple-touch-icon" href="/images/cake_white_on_blue_128_128_unrounded.png">
+
+    
+
+    <meta name="50fc73d52056532c18787976ceb78fddb87b78b2" content="ceb4cec06fc4a780c7b31b85c07cf75d1ca58d9d" />
+
+    
+    
+    
+
+    <script type='text/javascript'>
+        var _vwo_code=(function(){
+        var account_id=50155,
+        settings_tolerance=2000,
+        library_tolerance=2500,
+        use_existing_jquery=false,
+        // DO NOT EDIT BELOW THIS LINE
+        f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script>
+</head>
+
+<body ng-app="prepApp" ng-init="contentItemIsEmbedded = false"
+    class="
+           
+           
+            scrolling-body ">
+
+
+
+<div class="ic-alerts">
+    
+    
+</div>
+
+<select id="select-language-content-width-hack" style="display: none">
+    <option></option>
+</select>
+
+
+
+    
+    
+<div class="print-header navbar-print-header navbar navbar-inverse">
+    <div class="navbar-header">
+        <span class="navbar-brand">
+            <img src="/static//images/cake_white_20_21.png" class="logo" />
+            Interview Cake
+        </span>
+    </div>
+</div>
+
+
+
+
+    <div class="navbar navbar-normal navbar-inverse" role="navigation" ng-controller="HeaderCtrl" language="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                Interview Cake
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="dropdown tips">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" rel="nofollow">
+                        Interview Tips <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/coding-interview-beginner-faq">
+                                First coding interview? Start here.
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/coding-interview-tips">
+                                General coding interview tips
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/tricks-for-getting-unstuck-programming-interview">
+                                How to get un-stuck
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/impostor-syndrome-in-programming-interviews">
+                                Beating impostor syndrome
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/24-hours-before-onsite-whiteboard-coding-interview">
+                                24 hours before your onsite
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/why-youre-hitting-dead-ends-in-whiteboard-interviews">
+                                Why you're hitting dead ends
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/getting-the-most-from-coding-interview-practice-sessions">
+                                Best ways to practice
+                            </a>
+                        </li>
+
+                        
+
+                        <li>
+                            <a href="/coding-interview-timeline-exploding-offers-burnout-negotiation-leverage">
+                                Organizing your interview timeline
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/behavioral-questions-programming-interview-story-telling">
+                                Mastering behavioral questions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/coding-interview-faq">
+                                Common issues
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                
+
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" rel="nofollow">
+                        Glossary <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+    <a href="/big-o-notation-time-and-space-complexity">Big O Notation: <span complexity="n"></span>, <span complexity="n^2"></span>, etc</a>
+</li>
+<li>
+    <a href="/article/logarithms">Logarithms</a>
+</li>
+<li>
+    <a href="/concept/triangular-series">Triangular Series</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="/concept/binary-search">Binary Search</a>
+</li>
+<li>
+    <a href="/concept/bfs">Breadth-First Search</a>
+</li>
+<li>
+    <a href="/concept/dfs">Depth-First Search</a>
+</li>
+<li>
+    <a href="/concept/counting-sort">Counting Sort</a>
+</li>
+
+<li role="separator" class="divider"></li>
+<li>
+    <a href="/concept/brute-force">Brute Force Algorithms</a>
+</li>
+<li>
+    <a href="/concept/greedy">Greedy Algorithms</a>
+</li>
+<li>
+    <a href="/concept/bottom-up">Bottom-Up Algorithms</a>
+</li>
+<li>
+    <a href="/concept/overlapping-subproblems">Overlapping Subproblems</a>
+</li>
+<li>
+    <a href="/concept/memoization">Memoization</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="/concept/short-circuit-evaluation">Short Circuit Evaluation</a>
+</li>
+<li>
+    <a href="/concept/garbage-collection">Garbage Collection</a>
+</li>
+<li>
+    <a href="/concept/js-closure">Closure</a>
+</li>
+<li>
+    <a href="/concept/slice">Array Slicing</a>
+</li>
+<li>
+    <a href="/concept/hashing">Hashing</a>
+</li>
+<li>
+    <a href="/concept/mutable">Mutable vs Immutable</a>
+</li>
+<li>
+    <a href="/concept/in-place">In-Place Operation</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="/article/data-structures-computer-science">Data Structures Overview</a>
+</li>
+
+<li>
+    <a href="/concept/array">Array</a>
+</li>
+<li>
+    <a href="/concept/dynamic-array">Dynamic Array</a>
+</li>
+<li>
+    <a href="/concept/hash-map">Hash Table</a>
+</li>
+<li>
+    <a href="/concept/linked-list">Linked List</a>
+</li>
+<li>
+    <a href="/concept/queue">Queue</a>
+</li>
+<li>
+    <a href="/concept/stack">Stack</a>
+</li>
+<li>
+    <a href="/concept/binary-tree">Binary Tree</a>
+</li>
+<li>
+    <a href="/concept/graph">Graph</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="/concept/binary-numbers">Binary Numbers</a>
+</li>
+<li>
+    <a href="/concept/and">Bitwise AND</a>
+</li>
+<li>
+    <a href="/concept/or">Bitwise OR</a>
+</li>
+<li>
+    <a href="/concept/xor">Bitwise XOR</a>
+</li>
+<li>
+    <a href="/concept/not">Bitwise NOT</a>
+</li>
+<li>
+    <a href="/concept/bit-shift">Bit Shifting</a>
+</li>
+<li>
+    <a href="/concept/integer-overflow">Integer Overflow</a>
+</li>
+
+                    </ul>
+                </li>
+
+				
+                <li>
+					
+                        <a href="/table-of-contents">Full Course</a>
+                    
+                </li>
+				
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-cloak ng-show="currentUserSet">
+
+                <li ng-cloak>
+
+					
+
+                    <a class="upgrade" ng-hide="currentUser.is_full_access" href="/upgrade">
+                        Get the full course
+                        <span class="glyphicon glyphicon-chevron-right full-access-badge"></span>
+                    </a>
+                </li>
+
+                
+
+                
+                    <li>
+                        <p class="navbar-text">
+                            
+                            <span ng-show="currentUser.is_full_access" class="glyphicon glyphicon-star full-access-badge"></span>
+                        </p>
+                    </li>
+                    <li ng-hide="currentUser.is_anonymous">
+                        <a rel="nofollow" ng-click="logoutClick($event)" tracklink the-event="Logout Link Click" the-properties='{"which" : "header top right"}' href="">Log out</a>
+                    </li>
+                    <li ng-show="currentUser.is_anonymous">
+                        <a href="" rel="nofollow" ng-click="loginClick('header top right')">Log in to save progress</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="below-nav">
+
+        
+
+        
+        
+
+<div class="article dsa dsa-type-landing" ng-controller="PrepSeshApp">
+
+<div class="section-wrapper heading taller wider">
+<div class="section">
+
+
+
+
+
+<br>
+
+<h1>
+	<span class="guide-to-line">
+	The <em>Intuitive</em> Guide to
+	<br>
+	</span>
+	<span class="guide-name-line">
+	Data Structures And
+	Algorithms
+	</span>
+</h1>
+
+
+
+
+<div class="sales-copy">
+
+<p>
+<strong>
+This is not a freaking textbook.
+</strong>
+No confusing academic jargon. No long lists of properties to memorize. No proofs.
+Because that stuff doesn't help you actually <em>get it</em>.
+</p>
+
+<p>
+Here's what does: Learning <em>what to picture in your head</em> when you think of a dynamic array or a hash map. Learning how to <em>think in algorithms</em>.
+</p>
+
+<p>
+That's what this guide is focused on&mdash;giving you a <em>visual</em>, <em>intuitive</em> sense for how data structures and algorithms actually work.
+</p>
+
+<p>
+So if you've got a <strong>big coding interview</strong> coming up, or you never learned data structures and algorithms in school, or you did but you're kinda hazy on how some of this stuff fits together...
+</p>
+
+<p>
+This guide will fill in the gaps in your knowledge and make you say, "Oooh, <em>that's</em> how that works."
+</p>
+
+<p>
+We'll walk you through it all, step by step. Starting from the beginning.
+</p>
+
+
+
+
+</div> 
+
+
+</div>
+</div>
+
+
+<section class="article-content">
+<div id="table-of-contents">
+
+
+    <a href="/article/big-o-notation-time-and-space-complexity?course=dsa">
+    <div class="section-wrapper shaded">
+    <div class="section">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>
+                1. Big O Notation
+            </h2>
+
+            <p>
+                Learn how to compare the efficiency of different approaches to a problem.
+            </p>
+        </div>
+        <div class="col-md-6 col-diagram">
+            
+                <div class="big-o-diagram"><span complexity="n^2"></span></div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </a>
+
+    <a href="/article/data-structures-coding-interview?course=dsa">
+    <div class="section-wrapper ">
+    <div class="section">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>
+                2. Data Structures
+            </h2>
+
+            <p>
+                Build the main data structures from the ground up. Learn when to use an array vs. a linked list vs. a hash map.
+            </p>
+        </div>
+        <div class="col-md-6 col-diagram">
+            
+                <div class="diagram fill-container ">
+    <img src="/images/svgs/hashtables_labeled_no_padding_short.svg?bust=186" height="181" width="298"  alt="A blank array except for a 20, labeled as the value, stored at index 9. To the left the array is the word &quot;lies,&quot; labeled as the key, with an arrow pointing to the right at diamond with a question mark in the middle, labeled as the hashing function. The diamond points to the 9th index of the array."  />
+
+
+    
+</div>
+
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </a>
+
+    <a href="/article/logarithms?course=dsa">
+    <div class="section-wrapper shaded">
+    <div class="section">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>
+                3. Logarithms
+            </h2>
+
+            <p>
+                Logarithms come up a lot in algorithms. Review how they work and learn the situations where they&#39;re helpful.
+            </p>
+        </div>
+        <div class="col-md-6 col-diagram">
+            
+                <div class="diagram fill-container ">
+    <img src="/images/svgs/binary_tree__depth_5.svg?bust=186" height="200" width="300"  alt="A tree represented by circles connected with lines. The root node is on top, and connects to 2 children below it. Each of those children connect to 2 children below them, which all connect to their own 2 children, which all connect to their own 2 children."  />
+
+
+    
+</div>
+
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="section-wrapper cta-bottom-section-wrapper">
+<div class="section">
+
+
+
+
+
+<div id="exp-coding-interview-crash-course-email" style="display:none;">
+<h2 class="text-center">
+Get the coding interview crash course!
+</h2>
+<p class="text-center">
+  In this free email course, I'll teach you the right <em>way of thinking</em> for breaking down tricky algorithmic coding interview questions.
+</p>
+<div>
+<p class="text-center">
+No CS degree necessary.
+</p>
+<div ng-controller='EmailNewsletterSignupCtrl' id="email_magnet_dsa-bottom-cta-coding-interview-crash-course" class="email-magnet" campaign="intro_course">
+    <form class="the-form center-block" ng-hide="success" ng-submit="signupPress()">
+        
+        <div ng-cloak ng-show="failureMessage" ng-bind="failureMessage" class="error"></div>
+        <div class="input-group input-group-lg email-magnet-one-liner">
+                <input type="email" ng-model='email' placeholder="me@gmail.com" class="form-control" ng-disabled="disabled">
+                <span class="input-group-btn">
+                    <input ng-cloak type="submit" class="submit btn btn-branded btn-bold" style="" ng-value="disabled ? 'Working...' : 'Send me day 1 now!'" ng-disabled="disabled"/>
+                </span>
+        </div>
+        
+        
+        <p class="reassurance text-center">
+            No spam, ever.
+        </p>
+        
+    </form>
+
+    <div ng-cloak ng-show="success" class="success">
+        
+            <p class="custom-success text-center">
+                <strong>
+                    You're in!
+                </strong>
+            </p>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<div id="exp-crash-course-email" style="display:none;">
+<h2 class="text-center">
+Get the 7-day crash course!
+</h2>
+<p class="text-center">
+  In this free email course, I'll teach you the right <em>way of thinking</em> for breaking down tricky algorithmic coding questions.
+</p>
+<div>
+<p class="text-center">
+No CS degree necessary.
+</p>
+<div ng-controller='EmailNewsletterSignupCtrl' id="email_magnet_dsa-bottom-cta-crash-course" class="email-magnet" campaign="intro_course">
+    <form class="the-form center-block" ng-hide="success" ng-submit="signupPress()">
+        
+        <div ng-cloak ng-show="failureMessage" ng-bind="failureMessage" class="error"></div>
+        <div class="input-group input-group-lg email-magnet-one-liner">
+                <input type="email" ng-model='email' placeholder="me@gmail.com" class="form-control" ng-disabled="disabled">
+                <span class="input-group-btn">
+                    <input ng-cloak type="submit" class="submit btn btn-branded btn-bold" style="" ng-value="disabled ? 'Working...' : 'Send me day 1 now!'" ng-disabled="disabled"/>
+                </span>
+        </div>
+        
+        
+        <p class="reassurance text-center">
+            No spam, ever.
+        </p>
+        
+    </form>
+
+    <div ng-cloak ng-show="success" class="success">
+        
+            <p class="custom-success text-center">
+                <strong>
+                    You're in!
+                </strong>
+            </p>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<div id="exp-reminder-email">
+<h2>
+    AHHH I can't read all this right now!
+</h2>
+<p>
+    Get this guide as a set of bite-size readings. We'll send you one a day for a week.
+</p>
+<div ng-controller='EmailNewsletterSignupCtrl' id="email_magnet_dsa-bottom-cta-reminder" class="email-magnet" campaign="dsa_course">
+    <form class="the-form center-block" ng-hide="success" ng-submit="signupPress()">
+        
+        <div ng-cloak ng-show="failureMessage" ng-bind="failureMessage" class="error"></div>
+        <div class="input-group input-group-lg email-magnet-one-liner">
+                <input type="email" ng-model='email' placeholder="me@gmail.com" class="form-control" ng-disabled="disabled">
+                <span class="input-group-btn">
+                    <input ng-cloak type="submit" class="submit btn btn-branded btn-bold" style="" ng-value="disabled ? 'Working...' : 'Break it into bite-size pieces!'" ng-disabled="disabled"/>
+                </span>
+        </div>
+        
+        
+        <p class="reassurance text-center">
+            No spam, ever. Easy unsubscribe.
+        </p>
+        
+    </form>
+
+    <div ng-cloak ng-show="success" class="success">
+        
+            <p class="custom-success text-center">
+                <strong>
+                    Sweet! We'll send you the first bite-size chunk soon :)
+                </strong>
+            </p>
+        
+    </div>
+</div>
+
+</div>
+
+
+
+	
+
+
+</div>
+</div>
+
+
+
+</div>
+
+
+        
+        
+        
+
+        
+
+            <div id="print-footer">
+                <p>
+                    Want more coding interview help?
+                </p>
+
+                <p>
+                    Check out <span class="url">interviewcake.com</span> for more advice, guides, and practice questions.
+                </p>
+            </div>
+
+            <div ng-cloak id="footer">
+
+                
+
+                
+
+                
+
+                
+                    <div itemscope="" itemtype="http://schema.org/Corporation">
+                        <span class="schemaorghide" itemprop="description">Programming interview practice and tips for software engineers looking for jobs.</span>
+                        Copyright &copy; 2018
+                        <span itemprop="name">Cake Labs, Inc.</span> All rights reserved.
+                        <span class="schemaorghide" itemprop="image">https://www.interviewcake.com/static//images/cake_white_on_blue_600.png</span>
+                        <span class="schemaorghide" itemprop="logo">https://www.interviewcake.com/static//images/cake_white_on_blue_600.png</span>
+                        <span class="schemaorghide" itemprop="url">https://www.interviewcake.com</span>
+                        <span class="schemaorghide" itemprop="telephone">(804) 876-2253</span>
+
+                        <address itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">228 Park Ave S #82632</span>,
+                            <span itemprop="addressLocality">New York</span>,
+                            <span itemprop="addressRegion">NY</span>
+                            <span itemprop="addressCountry">US</span>
+                            <span itemprop="postalCode">10003</span>
+                            <span itemprop="telephone">(804) 876-2253</span>
+                        </address>
+
+                        <address class="schemaorghide" itemprop="location" itemscope="" itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressCountry">US</span>
+                            <span itemprop="addressLocality">New York</span>
+                            <span itemprop="addressRegion">NY</span>
+                            <span itemprop="streetAddress">228 Park Ave S #82632</span>
+                            <span itemprop="postalCode">10003</span>
+                            <span itemprop="telephone">(804) 876-2253</span>
+                        </address>
+
+                        <div itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                            <div itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates">
+                                <meta itemprop="latitude" content="37.76480">
+                                <meta itemprop="longitude" content="-122.41872">
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div>
+                    <a href="/about">About</a>
+                    |
+                    <a rel="nofollow" href="/privacy-policy">Privacy</a>
+                    |
+                    <a rel="nofollow" href="/terms-and-conditions">Terms</a>
+                </div>
+
+                
+
+            </div>
+
+        
+
+    </div>
+
+
+
+    
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-cookies.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-animate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.js"></script>
+    
+
+    
+        <script src="/static/js/underscore-min.js"></script>
+        <script src="/static/js/angular-django-rest-resource.js"></script>
+        <script src="/static/js/angular-seo.js"></script>
+        <script src="/static/js/sticky.js"></script>
+    
+
+    <script type="text/javascript">
+        (function(){
+  var FLAGS = {
+    'learnings': true,'only_3_free_questions': true,'allow_anonymous_purchase': true,'data_structures_deployed': false,'tell_me_more': true,'tips_dropdown': true,'toc': true,'course_survey': true
+    },
+    SWITCHES = {
+    
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+    </script>
+
+    
+
+    <script src="/static/js/base.js?bust=186"></script>
+
+    
+        <script src="/static/js/prism.min.js"></script>
+        <script src="/static/js/jquery.payment.js"></script>
+        <script src="/static/js/edgeUtils.js"></script>
+
+        
+
+    
+
+    
+
+    <script type="text/javascript">
+        window.CACHEBUST_QUERY_STR = '?bust=186';
+        // TODO: move above into the below
+        window.JS_CONSTANTS = {"ACE_LANGUAGES": [{"ace": "haskell", "short_name": "haskell", "display_name": "Haskell", "codewars": "haskell", "editor_template": "myFunction :: String -> String\n-- write the body of your function here\n\n\nmyFunction arg = \"running with \" ++ arg\n\nmain = do\n\n  -- run your function through some test cases here\n  -- remember: debugging is half the battle!\n  let result = myFunction \"test input\"\n  putStrLn result\n", "display_name_without_beta": "Haskell"}, {"ace": "golang", "short_name": "go", "display_name": "Go", "codewars": "go", "editor_template": "package main\n\nimport \"fmt\"\n\nfunc myFunction(arg string) string {\n\n    // Write the body of your function here\n    \n\n    return \"running with \" + arg\n}\n\nfunc main() {\n\n    // Run your function through some test cases here.\n    // Remember: debuggin is half the battle!\n    fmt.Println(myFunction(\"test input\"))\n}\n", "display_name_without_beta": "Go"}, {"ace": "plain_text", "short_name": "nolanguage", "dropdown_bottom": true, "prism": "none", "display_name": "Plain text", "display_name_without_beta": "Plain text"}, {"closest_languages": ["ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "python", "short_name": "python", "case_convention": "snake", "display_name": "Python", "codewars": "python", "prism": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python"}, {"closest_languages": ["python", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "ruby", "short_name": "ruby", "case_convention": "snake", "display_name": "Ruby", "codewars": "ruby", "prism": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python"], "ace": "java", "short_name": "java", "case_convention": "camel", "display_name": "Java", "codewars": "java", "prism": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python"], "ace": "javascript", "short_name": "javascript", "case_convention": "camel", "display_name": "JavaScript", "codewars": "javascript", "prism": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "c", "case_convention": "camel", "display_name": "C", "codewars": "c", "prism": "c", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"closest_languages": ["c", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "cpp", "case_convention": "camel", "display_name": "C++", "codewars": "cpp", "prism": "cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python"], "ace": "csharp", "short_name": "csharp", "case_convention": "camel", "display_name": "C#", "codewars": "csharp", "prism": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python"], "ace": "php", "short_name": "php", "case_convention": "camel", "display_name": "PHP", "codewars": "php", "prism": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "c", "ruby"], "ace": "swift", "codewars_version": "4.0", "short_name": "swift", "case_convention": "camel", "display_name": "Swift", "codewars": "swift", "prism": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "ruby", "php"], "ace": "objectivec", "codewars_version": "objc-arc", "short_name": "objectivec", "case_convention": "camel", "display_name": "Objective-C", "codewars": "objc", "prism": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "C18N_LANGUAGES": [{"closest_languages": ["ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "python", "short_name": "python", "case_convention": "snake", "display_name": "Python", "codewars": "python", "prism": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python"}, {"closest_languages": ["python", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "ruby", "short_name": "ruby", "case_convention": "snake", "display_name": "Ruby", "codewars": "ruby", "prism": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python"], "ace": "java", "short_name": "java", "case_convention": "camel", "display_name": "Java", "codewars": "java", "prism": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python"], "ace": "javascript", "short_name": "javascript", "case_convention": "camel", "display_name": "JavaScript", "codewars": "javascript", "prism": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "c", "case_convention": "camel", "display_name": "C", "codewars": "c", "prism": "c", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"closest_languages": ["c", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "cpp", "case_convention": "camel", "display_name": "C++", "codewars": "cpp", "prism": "cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python"], "ace": "csharp", "short_name": "csharp", "case_convention": "camel", "display_name": "C#", "codewars": "csharp", "prism": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python"], "ace": "php", "short_name": "php", "case_convention": "camel", "display_name": "PHP", "codewars": "php", "prism": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "c", "ruby"], "ace": "swift", "codewars_version": "4.0", "short_name": "swift", "case_convention": "camel", "display_name": "Swift", "codewars": "swift", "prism": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "ruby", "php"], "ace": "objectivec", "codewars_version": "objc-arc", "short_name": "objectivec", "case_convention": "camel", "display_name": "Objective-C", "codewars": "objc", "prism": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "DEFAULT_C18N_LANGUAGE": {"closest_languages": ["ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "python", "short_name": "python", "case_convention": "snake", "display_name": "Python", "codewars": "python", "prism": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python"}, "INTEGRATIONS_SETTING_ONLY_INTEGRATIONS_THAT_SUPPORT_FRONT_END_ONLY": {"All": false, "Google Analytics": true, "Adwords": true, "Optimizely": true, "Facebook Pixel": true, "Twitter Ads": true}, "PRISM_LANGUAGES": [{"ace": "plain_text", "short_name": "nolanguage", "dropdown_bottom": true, "prism": "none", "display_name": "Plain text", "display_name_without_beta": "Plain text"}, {"short_name": "html", "prism": "markup", "display_name": "HTML", "display_name_without_beta": "HTML"}, {"short_name": "sql", "prism": "sql", "display_name": "SQL", "display_name_without_beta": "SQL"}, {"closest_languages": ["ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "python", "short_name": "python", "case_convention": "snake", "display_name": "Python", "codewars": "python", "prism": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python"}, {"closest_languages": ["python", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "ace": "ruby", "short_name": "ruby", "case_convention": "snake", "display_name": "Ruby", "codewars": "ruby", "prism": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python"], "ace": "java", "short_name": "java", "case_convention": "camel", "display_name": "Java", "codewars": "java", "prism": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python"], "ace": "javascript", "short_name": "javascript", "case_convention": "camel", "display_name": "JavaScript", "codewars": "javascript", "prism": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "c", "case_convention": "camel", "display_name": "C", "codewars": "c", "prism": "c", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"closest_languages": ["c", "csharp", "java", "objectivec", "python", "php", "javascript", "ruby", "swift"], "ace": "c_cpp", "short_name": "cpp", "case_convention": "camel", "display_name": "C++", "codewars": "cpp", "prism": "cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python"], "ace": "csharp", "short_name": "csharp", "case_convention": "camel", "display_name": "C#", "codewars": "csharp", "prism": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python"], "ace": "php", "short_name": "php", "case_convention": "camel", "display_name": "PHP", "codewars": "php", "prism": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "c", "ruby"], "ace": "swift", "codewars_version": "4.0", "short_name": "swift", "case_convention": "camel", "display_name": "Swift", "codewars": "swift", "prism": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "ruby", "php"], "ace": "objectivec", "codewars_version": "objc-arc", "short_name": "objectivec", "case_convention": "camel", "display_name": "Objective-C", "codewars": "objc", "prism": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "CACHEBUST_QUERY_STR": "?bust=186", "next_step_type_enum": {"course_section_item": "_NEXT_STEP_TYPE_COURSE_SECTION_ITEM_", "done": "_NEXT_STEP_TYPE_DONE_", "purchase": "_NEXT_STEP_TYPE_PURCHASE_", "login": "_NEXT_STEP_TYPE_LOGIN_"}, "COURSE_SURVEY": [{"question": "How much time do you have to prepare for your interview?", "q_id": "time", "answers": ["As long as it takes", "Less than a month", "Less than a week", "It's basically tomorrow!"]}, {"question": "How'd you learn to code?", "q_id": "background", "answers": ["University", "Bootcamp", "Self-taught"]}, {"question": "What's your biggest worry for interviews?", "q_id": "worry", "answers": ["I'm not good enough at some of the advanced topics", "I don't even know the basics", "I don't have enough time to prepare", "I won't get as high an offer as I can earn"]}]};
+
+        
+        window.JS_VARS = {};
+        
+
+        
+    </script>
+
+    
+
+    
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script type="text/javascript">
+            Stripe.setPublishableKey('pk_live_4wtgGTkgBtk4YIB9JDjYdOD0');
+        </script>
+    
+
+    
+
+    
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=149278655279066";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+    
+
+    
+    
+        
+            <script type="text/ng-template" id="/partials/animation.html"><div class="animation-wrapper">
+    <div class="animation" id="Stage-[--[getCompId()]--]" ng-class="getCompId()">
+    </div>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/animation_iframe.html"><div class="animation-iframe-wrapper">
+    <iframe class="animation-iframe" ng-class="'animation-iframe-'+getCompId()"></iframe>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/code-inline.html"><span class="ic-code-inline" ng-transclude></span></script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/code-block.html"><pre class="language-[--[language]--]">
+  <code class="language-[--[language]--]" ng-transclude></code>
+</pre>
+<span class="warning-message" ng-show="warningMessage" ng-bind="warningMessage"></span>
+<div class="select-language-content" ng-hide="staticLanguage" ng-cloak>
+<select ng-model="contentLanguage"
+        ng-options="language.display_name for language in contentLanguages | orderBy: 'display_name'"
+        ng-change="updateLanguage(contentLanguage)">
+</select>
+</div>
+<span class="only-content-language" ng-show="staticLanguage" ng-bind="onlyLanguage"></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/complexity.html"><span class="complexity"><span math>O([--[getComplexityMarkup()]--])</span></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/concept.html"><span class="concept-wrapper" ng-init="showConcept=false">
+
+    <span ng-click="showConcept=!showConcept" class="concept">
+        <span class="concept-name" ng-transclude></span>
+        <span class="show-concept-icon">&#8628;</span>
+    </span>
+
+    <div ng-show="showConcept" class="slide concept-body embedded" ng-include="conceptPartialUrl">
+        Loading...
+    </div>
+
+</span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/function.html"><span class="ic-function"><span class="name" ng-transclude></span><span ng-hide="noParens">()</span></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/heading.html"><h3 class="heading slide" ng-show="shouldShow()" ng-cloak ng-bind="::getHeadingText()"></h3>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/inline-footnote.html"><span class="footnote-wrapper" ng-init="show = false">
+    <span class="show-footnote-icon" ng-click="show = !show">&#8628;</span>
+    <p class="footnote" ng-transclude ng-show="show">Loading...</p>
+</span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/loading.html"><div class="Loading">
+    Loading...
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/math.html"><span class="ic-math" ng-class="{'block': isBlock()}" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/note.html"><div class="note slide" ng-show="shouldShow()">
+    <div class="note-content" ng-transclude>
+    </div>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/section.html"><div class="section-wrapper" ng-class="getSectionClass()" ng-init="ready=false" ng-show="shouldShow()">
+    <span heading="[--[section]--]" hide-heading="[--[hideHeading]--]"></span>
+
+    <div class="section" ng-class="getSectionClass()" ng-transclude>
+    </div>
+
+    
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/variable.html"><span class="ic-variable" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/words.html"><span class="ic-words" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/sidebar-sticker.html"><div class="sidebar-sticker-container-container">
+    <div class="sidebar-sticker-container" ng-hide="hide">
+        <div class="sidebar-sticker" ng-style="{visibility: visibility}" sticky offset="100" hide-when-partially-offscreen ng-cloak blocks-news-drawer-when-visible id="left-side-sticker">
+            <div class="sidebar-sticker-content">
+	            <div ng-transclude>
+	            </div>
+	        </div>
+	        <span class='close-button' ng-click="hide=true">&#215;</span>
+        </div>
+    </div>
+</div></script>
+        
+    
+
+    <!-- load current-user json with initial http request -->
+    <div class="hidden" data-preload-resource="/api/v1/current-user/" data-thejson="{&quot;id&quot;:9148762,&quot;username&quot;:&quot;2018-07-28_07:19:50_m+$_#4&quot;,&quot;email&quot;:null,&quot;date_joined&quot;:&quot;2018-07-28T07:19:50.902832+00:00&quot;,&quot;first_name&quot;:&quot;&quot;,&quot;last_name&quot;:&quot;&quot;,&quot;full_name&quot;:&quot;&quot;,&quot;short_name&quot;:&quot;friend&quot;,&quot;is_anonymous&quot;:true,&quot;is_on_last_question&quot;:false,&quot;percent_done&quot;:0,&quot;num_questions_done&quot;:0,&quot;num_questions_remaining&quot;:46,&quot;recruiting_is_interested_in_intros&quot;:null,&quot;is_full_access&quot;:false,&quot;first_payment_date&quot;:null,&quot;last_payment_date&quot;:null,&quot;num_free_questions_left&quot;:3,&quot;terms_has_agreed_to_latest&quot;:false,&quot;preferred_content_language&quot;:&quot;&quot;,&quot;preferred_editor_language&quot;:&quot;&quot;,&quot;is_staff&quot;:false,&quot;auth_providers_human_readable_list&quot;:&quot;&quot;,&quot;num_auth_providers&quot;:0,&quot;auth_email&quot;:&quot;&quot;,&quot;profile_public_id&quot;:null}">
+        {"id":9148762,"username":"2018-07-28_07:19:50_m+$_#4","email":null,"date_joined":"2018-07-28T07:19:50.902832+00:00","first_name":"","last_name":"","full_name":"","short_name":"friend","is_anonymous":true,"is_on_last_question":false,"percent_done":0,"num_questions_done":0,"num_questions_remaining":46,"recruiting_is_interested_in_intros":null,"is_full_access":false,"first_payment_date":null,"last_payment_date":null,"num_free_questions_left":3,"terms_has_agreed_to_latest":false,"preferred_content_language":"","preferred_editor_language":"","is_staff":false,"auth_providers_human_readable_list":"","num_auth_providers":0,"auth_email":"","profile_public_id":null}
+    </div>
+
+    
+
+    
+
+    
+    <div ng-controller="LoginModalCtrl" class="modal fade login-modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Log In" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" ng-show="closeable" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 login-buttons-wrapper">
+                            <h3 ng-bind='note'>Log in/sign up</h3>
+                            <p class="subheading">With just a couple clicks.</p>
+                            <div class="login-btns">
+    <a ng-href="/auth/login/github/?next=[--[next | urlescape]--]" class="btn btn-soc-github"><i class="fa fa-github"></i> <span class="bar">|</span> <span class="company">GitHub Auth</span></a>
+    <a ng-href="/auth/login/google-oauth2/?next=[--[next | urlescape]--]" class="btn btn-soc-google-plus"><i class="fa my-fa-google-plus"></i> <span class="bar">|</span> <span class="company">Google Auth</span></a>
+    <a ng-href="/auth/login/facebook/?next=[--[next | urlescape]--]" class="btn btn-soc-facebook"><i class="fa my-fa-facebook"></i> <span class="bar">|</span> <span class="company">Facebook Auth</span></a>
+</div>
+<p class="login-reassurance">
+    <small>
+        We'll never post on your wall or message your friends.
+    </small>
+</p>
+
+                        </div>
+                        <div class="col-sm-6 testimonial-wrapper">
+                            <div class="inline-testimonial wider">
+    
+    <div class="image-wrapper">
+        <img class="image-top" alt="Terri, happy user" src="/static//images/testimonials/terri.jpg">
+    </div>
+    
+    <span class="text text-with-image">
+        <span class="quotation-mark">&ldquo;</span>I'm happy to share that Interview Cake worked: I got 3 offers, and I'm happily joining GoDaddy as Software Engineer! Thank you for your work on Interview Cake. I will highly recommend to my peers!
+        <span class="author">
+            &mdash; 
+            
+                Terri
+            
+        </span>
+    </span>
+</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <input type='hidden' name='csrfmiddlewaretoken' value='6G3bNtwRfEgQdjOsHpFlxW7V3BwX3s38O3kbOSBXnJw2hatFyBKhbqiGPXIyJkQt' />
+    <div id="loading">
+    . . .
+    </div>
+</body>
